@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FlightMatrix – Flight Ticket Comparison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <span>✈️</span> FLIGHTMATRIX
+    </div>
+    <nav class="nav-links">
+      <a href="#search">Search</a>
+      <a href="#results">Results</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="badge">Demo · Front-end only</div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-title">
+        Compare <span>flight tickets</span> across platforms in one view.
+      </div>
+      <p class="hero-sub">
+        Type your route once and instantly see fares from MakeMyTrip, Skyscanner,
+        EaseMyTrip, Cleartrip and more – all in a single screen.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" id="scrollToSearch">
+          🔍 Start comparing
+        </button>
+        <button class="btn-ghost">
+          📊 Demo with sample data
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">⚡ Instant front-end filtering</div>
+        <div class="stat">🧪 No real bookings · safe to test</div>
+        <div class="stat">💻 Built with HTML, CSS & JS</div>
+      </div>
+    </div>
+
+    <div class="hero-card" id="about">
+      <h3>How this demo works</h3>
+      <p>
+        This website is a <strong>front-end practice project</strong>. Prices and
+        flights are <strong>sample data</strong> – no real API calls or payments.
+      </p>
+      <ul>
+        <li>Filter by airline, non-stop, and max price.</li>
+        <li>Sort by cheapest, earliest, or shortest duration.</li>
+        <li>Click “Compare” to see prices on each platform.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SEARCH PANEL -->
+  <section class="search-panel" id="search">
+    <div class="search-header">
+      <div>
+        <h2>Search & Compare Flight Tickets</h2>
+        <p>Enter your route and date, then adjust filters to refine results.</p>
+      </div>
+      <button class="btn-ghost" id="resetBtn">Reset</button>
+    </div>
+
+    <div class="search-grid">
+      <div>
+        <div class="field-label">From</div>
+        <div class="input-wrapper">
+          <input id="fromInput" type="text" placeholder="Delhi (DEL)" />
+          <div class="swap" id="swapBtn">Swap ⇄</div>
+        </div>
+      </div>
+      <div>
+        <div class="field-label">To</div>
+        <div class="input-wrapper">
+          <input id="toInput" type="text" placeholder="Mumbai (BOM)" />
+        </div>
+      </div>
+      <div>
+        <div class="field-label">Departure Date</div>
+        <div class="input-wrapper">
+          <input id="dateInput" type="date" />
+        </div>
+      </div>
+      <div>
+        <div class="field-label">Passengers</div>
+        <div class="input-wrapper">
+          <select id="passengersInput">
+            <option value="1">1 Adult</option>
+            <option value="2">2 Travellers</option>
+            <option value="3">3 Travellers</option>
+            <option value="4">4 Travellers</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-actions">
+      <div>
+        <button class="btn-primary" id="searchBtn">
+          🔍 Search & Compare
+        </button>
+      </div>
+      <div class="filters-row">
+        <span>Filters:</span>
+        <label class="chip">
+          <input type="checkbox" id="nonStopFilter" /> Non-stop only
+        </label>
+
+        <select id="airlineFilter">
+          <option value="">Any airline</option>
+          <option value="IndiGo">IndiGo</option>
+          <option value="Air India">Air India</option>
+          <option value="Vistara">Vistara</option>
+          <option value="SpiceJet">SpiceJet</option>
+        </select>
+
+        <label>
+          Max price (₹)
+          <input
+            type="number"
+            id="maxPriceFilter"
+            min="0"
+            placeholder="e.g. 7000"
+            style="margin-left:4px;"
+          />
+        </label>
+
+        <select id="sortSelect">
+          <option value="cheapest">Sort: Cheapest first</option>
+          <option value="earliest">Sort: Earliest departure</option>
+          <option value="duration">Sort: Shortest duration</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS HEADER -->
+  <section class="results-header" id="results">
+    <h3>
+      Showing <span id="resultsCount">0 flights</span>
+      <small id="resultsRoute"></small>
+    </h3>
+    <small>Prices & routes shown here are demo data only.</small>
+  </section>
+
+  <!-- FLIGHT LIST -->
+  <section class="flight-list" id="flightList"></section>
+  <div class="no-results" id="noResults" style="display:none;">
+    No flights match your search. Try changing route, date, or filters.
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="#top">Back to top</a> •
+    <a href="#search">Search flights</a> •
+    <a href="#about">About this demo</a>
+  </div>
+  <div>FlightMatrix · HTML + CSS + JavaScript practice project (no real bookings).</div>
+</footer>
+
+<!-- Link JS at the end so DOM is ready -->
+<script src="app.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
